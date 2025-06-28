@@ -1,80 +1,98 @@
-# 🤖 Rolmatik - Discord Sunucu Yönetim Botu
 
-**Aurelios-Discord-Moderation**, Discord sunucularınızı daha düzenli, güvenli ve kullanıcı dostu hale getirmek için geliştirilmiş, kolay kullanımlı bir moderasyon botudur.  
-Python ile yazılmıştır ve `discord.py` kütüphanesini temel alır.
+🤖 Aurelios-Discord-Moderation
 
----
-
-## 🔧 Özellikler
-
-- 🛡️ **Moderasyon Komutları**  
-  Kullanıcıları kickleme, banlama, uyarma gibi temel yönetim işlemleri.
-
-- 🧾 **Oto Rol Sistemi**  
-  Yeni katılan üyelere otomatik olarak rol atama.
-
-- 👋 **Hoş Geldin Mesajı**  
-  Sunucuya yeni biri katıldığında özel mesaj ya da kanal bildirimi gönderir.
-
-- 🧹 **Temel Temizlik Komutları** *(isteğe bağlı)*  
-  Belirli sayıda mesajı silme gibi işlemler.
-
-- ⚙️ **Kolay Geliştirilebilir Yapı**  
-  Yeni özellikler eklemeye uygun sade kod yapısı.
+Aurelios-Discord-Moderation, bir Discord sunucusunun yönetimini kolaylaştırmak amacıyla geliştirilmiş kapsamlı bir bot projesidir.
+Sunucu içi denetim, otomatik rol atama, loglama ve faydalı yardımcı araçlar sunar.
+Python ile yazılmış olup discord.py kütüphanesi kullanılarak modüler yapıda geliştirilmiştir.
 
 ---
 
-## 📦 Kurulum
+🔧 Özellikler
 
-```bash
+- 🛡️ Moderasyon: Ban, kick, timeout, silme gibi komutlarla kullanıcı denetimi.
+- 🧾 Otorol: Yeni katılan kullanıcılara otomatik rol atama sistemi.
+- 📜 Loglama: Kick, ban, silme ve rol olaylarının kayıt altına alınması.
+- ⚙️ Admin Komutları: Botu yeniden başlatma, ayarları yapılandırma.
+- 🧰 Yardımcı Komutlar: Sunucu bilgisi, kullanıcı bilgisi, zamanlayıcı gibi araçlar.
+- 🔌 Modüler Yapı: cogs/ klasöründeki modüllerle kolay genişletilebilir sistem.
+- 🛢️ SQLite Veritabanı: Rol ve ayar kayıtları için dahili veri yönetimi.
+- 💡 Yardım Sistemi: Komutlara özel açıklamalar ve yardım komutları.
+
+---
+
+🚀 Kurulum
+
 git clone https://github.com/Aurelios-dev/Aurelios-Discord-Moderation.git
 cd Aurelios-Discord-Moderation
-```
+pip install -r requirements.txt (Dosya yapısında yoksa oluştura bilirsiniz.)
 
-## 🔑 Bot Token Ayarları
-
-Bot token’ınızı `config.json` veya `.env` gibi güvenli bir şekilde saklamayı unutmayın. Örnek `.env` içeriği:
-
-```
-DISCORD_TOKEN=senin-bot-tokenin
-```
-
-Kodda `os.getenv("DISCORD_TOKEN")` kullanarak çağırabilirsiniz.
+Gerekirse discord.py v2+ yüklü olduğundan emin olun:
+pip install -U discord.py
 
 ---
 
-## 🚀 Botu Başlatmak
+⚙️ Ayarlar
 
-```bash
-python bot.py
-```
+config.json
 
----
+Bot ayarlarını buradan yapabilirsin:
 
-## 📌 Gerekli İzinler
+{
+  "token": "BOT_TOKENINIZ",
+  "prefix": "!",
+  "log_channel_id": 123456789012345678,
+  "autorole_id": 123456789012345678
+}
 
-- Üyeleri Yönetme
-- Mesajları Görüntüleme ve Silme
-- Roller Atama
-- Sunucuya Katılanları Görme (Intents ayarlarından `Server Members Intent` aktif olmalı)
-
----
-
-## 💡 Katkıda Bulun
-
-Aurelios-Discord-Moderation açık kaynak bir projedir.  
-Yeni özellikler eklemek, hata düzeltmek veya öneri sunmak için `Issue` açabilir veya `Pull Request` gönderebilirsiniz.
+Not: Geliştirme sırasında token'ı asla herkese açık paylaşmayın!
 
 ---
 
-## 📝 Lisans
+🧠 Kullanım
 
-Bu proje MIT lisansı ile lisanslanmıştır.  
-Dilediğiniz gibi kullanabilir, dağıtabilir ve geliştirebilirsiniz.
+Botu başlatmak için:
+
+python main.py
 
 ---
 
-## ✨ Destek
+🗃️ Yapı
 
-Herhangi bir soru, hata bildirimi veya öneriniz varsa GitHub üzerinden iletişime geçebilirsiniz.  
-İyi sunucular, düzenli topluluklar! 🚀
+- main.py — Botun başlangıç noktası.
+- bot.py — Discord client ve olay yönetimi.
+- cogs/ — Özelliklerin modüler olarak tutulduğu klasör.
+- utils/ — Yardımcı işlevler ve filtreler.
+- models.py — Veritabanı modelleri.
+- database.py — SQLite işlemleri.
+- config.json — Ayar dosyası.
+
+---
+
+🛠️ Geliştirici Notları
+
+- Geliştirme ortamı: Python 3.10+
+- Veritabanı: SQLite (bot_database.db)
+- Kütüphaneler: discord.py, sqlite3, os, json, datetime, re
+
+---
+
+📌 Katkı
+
+Pull Request'ler ve önerilere her zaman açığız.
+Dilersen proje üzerinde sen de katkıda bulunabilirsin!
+
+İletişim: aurelios_1
+Discord: https://discord.gg/7sqkqRkY
+
+---
+
+📜 Lisans
+
+Bu proje MIT Lisansı ile lisanslanmıştır.
+Dilediğiniz gibi kullanabilir, değiştirebilir ve dağıtabilirsiniz.
+
+---
+
+💬 İletişim
+
+Soru, öneri veya geri bildirim için GitHub üzerinden bizimle iletişime geçebilirsiniz.
