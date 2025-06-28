@@ -62,7 +62,7 @@ python bot.py
 
 ## 💡 Katkıda Bulun
 
-Rolmatik açık kaynak bir projedir.  
+Aurelios-Discord-Moderation açık kaynak bir projedir.  
 Yeni özellikler eklemek, hata düzeltmek veya öneri sunmak için `Issue` açabilir veya `Pull Request` gönderebilirsiniz.
 
 ---
