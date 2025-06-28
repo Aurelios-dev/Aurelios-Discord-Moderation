@@ -89,8 +89,8 @@ Modern Discord sunucuları için geliştirilmiş kapsamlı Aurelios-Discord-Mode
 
 ### 1. Projeyi İndirin
 ```bash
-git clone https://github.com/kullanıcıadı/discord-moderasyon-botu.git
-cd discord-moderasyon-botu
+git clone https://github.com/Aurelios-dev/Aurelios-Discord-Moderation.git
+cd Aurelios-Discord-Moderation
 ```
 
 ### 2. Bağımlılıkları Yükleyin
@@ -114,7 +114,7 @@ python main.py
 ### Bot Ayarları (`config.json`)
 ```json
 {
-    "default_prefix": "!",
+    "default_prefix": "/",
     "default_language": "tr",
     "auto_sync_commands": true,
     "debug_mode": false,
@@ -173,7 +173,7 @@ Aşağıdaki intent'leri etkinleştirin:
 ## 📁 Proje Yapısı
 
 ```
-discord-moderasyon-botu/
+Aurelios-Discord-Moderation/
 ├── main.py                 # Ana başlatma dosyası
 ├── bot.py                  # Bot sınıfı ve temel yapı
 ├── database.py             # Veritabanı yönetimi
